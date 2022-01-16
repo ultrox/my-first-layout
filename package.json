@@ -1,0 +1,8 @@
+{
+  "name": "css-p1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marko Vujanic",
+  "license": "MIT",
+  "dependencies": {}
+}
