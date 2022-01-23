@@ -1,0 +1,64 @@
+/* Navigation  
+- I'm thinking to extract general styles that's specific for the navigation
+  - Padding,borders margins if needed, 
+  - color I would put in general.css as main color looks like it will be blue
+  - Do I specifically set font family for the navigation?
+  - I always thinking about do I use utility or just mix display flex
+    in block of elements, it feels like I'm mixing concern's
+*/
+:root {
+  /* --main-color:  */
+  --main-color: hsl(217, 90%, 72%);
+}
+
+nav {
+  color: var(--brand-white);
+  background: var(--main-color);
+  padding: 0.5em;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: 1.3; /* computed value of font size * 1.3 is the value o line height */
+}
+
+nav,
+.right,
+.personal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .personal__avatar {
+  max-width: 2rem;
+  border-radius: 50%;
+}
+
+nav .links li {
+  list-style: none; /*why this is not reset? */
+}
+
+/* 
+  I tried to micro manage each section with this gutter, then I 
+  remembered css is override first language
+  * has low specificity and is easier to override, also is most general 
+  way of saying "I want space between elements"
+*/
+nav .right * + * {
+  --links-gutter: 0.5em;
+  margin-left: var(--links-gutter);
+}
+
+nav .links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav .links a:hover {
+  text-decoration: underline;
+}
+
+.left,
+.links,
+.personal {
+  display: flex;
+}

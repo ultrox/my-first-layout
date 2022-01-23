@@ -5,3 +5,11 @@
 .tile {
   padding: var(--tile-padding);
 }
+
+.flex {
+  display: flex;
+}
+
+.bold {
+  font-weight: 700;
+}
