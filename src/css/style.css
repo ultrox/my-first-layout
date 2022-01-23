@@ -122,3 +122,7 @@ nav + div {
   margin-left: calc(var(--tile-padding) * -1);
   display: flex;
 }
+
+#dev-header {
+  display:none;
+}
