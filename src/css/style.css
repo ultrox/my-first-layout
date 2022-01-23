@@ -6,6 +6,10 @@
   - I always thinking about do I use utility or just mix display flex
     in block of elements, it feels like I'm mixing concern's
 */
+body {
+  background-color: var(--main-bg-color);
+}
+
 :root {
   /* --main-color:  */
   --main-color: hsl(217, 90%, 72%);
@@ -61,4 +65,9 @@ nav .links a:hover {
 .links,
 .personal {
   display: flex;
+}
+
+.tile {
+  background-color: var(--tile-color);
+  padding: var(--tile-padding);
 }
