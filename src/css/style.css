@@ -12,12 +12,12 @@ body {
 
 :root {
   /* --main-color:  */
-  --main-color: hsl(217, 90%, 72%);
+  --brand-main-color: hsl(217, 90%, 72%);
 }
 
 nav {
   color: var(--brand-white);
-  background: var(--main-color);
+  background: var(--brand-main-color);
   padding: 0.5em;
   font-family: 'Poppins', sans-serif;
   font-size: var(--font-size-sm);
@@ -78,6 +78,10 @@ nav + div {
   margin-top: var(--default-gap);
 }
 
+.with-sidebar aside {
+  font-size: var(--font-size-xs);
+}
+
 /* Sidebar */
 .with-sidebar {
   display: flex;
@@ -85,11 +89,36 @@ nav + div {
   gap: var(--default-gap);
 }
 
-.with-sidebar > * {
-  flex: 25ch;
+.with-sidebar > :first-child {
+  flex: 45ch;
 }
 
-.with-sidebar > *:last-child {
+.with-sidebar > :last-child {
   flex: 999;
   min-width: 60%;
+}
+
+.sidebar-links {
+  font-size: var(--font-size-sm);
+  color: var(--brand-white);
+}
+
+.sidebar-links li a {
+  color: hsl(0deg 0% 76%);
+  text-decoration: none;
+  border-radius: 0 20px 20px 0;
+  padding-left: var(--tile-padding);
+  flex: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.sidebar-links li a:hover {
+  color: var(--brand-main-color);
+  background-color: hsl(213deg 60% 97%);
+}
+
+.sidebar-links li {
+  margin-left: calc(var(--tile-padding) * -1);
+  display: flex;
 }
