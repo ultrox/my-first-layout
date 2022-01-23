@@ -2,10 +2,6 @@
   margin-top: var(--flow-space, 1rem);
 }
 
-.tile {
-  padding: var(--tile-padding);
-}
-
 .flex {
   display: flex;
 }
@@ -18,9 +14,4 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 2.33rem;
-}
-
-.shadow {
-  /* very small box shadow */
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.10);
 }

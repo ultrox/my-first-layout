@@ -4,7 +4,8 @@
   --brand-white: hsl(0, 0%, 100%);
   --tile-padding: 0.5em;
   --tile-color: var(--brand-white);
-  --main-bg-color:hsl(210deg 38% 95%);
+  --main-bg-color: hsl(210deg 38% 95%);
+  --default-gap: 1rem;
 
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
   --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);

@@ -70,4 +70,26 @@ nav .links a:hover {
 .tile {
   background-color: var(--tile-color);
   padding: var(--tile-padding);
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+main > * + *,
+nav + div {
+  margin-top: var(--default-gap);
+}
+
+/* Sidebar */
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--default-gap);
+}
+
+.with-sidebar > * {
+  flex: 25ch;
+}
+
+.with-sidebar > *:last-child {
+  flex: 999;
+  min-width: 60%;
 }
