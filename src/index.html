@@ -40,17 +40,41 @@
   </header>
 
   <nav>
+    <!-- 
+      - Which element should impose the height of header?
+        - I would say image that should be limited in width & height
+    
+      - Challenge here is to make Name alight/center with the rest of nav links
+      - Not sure is html is already crowdy?
+        - I could take another approach and ul>li>a structure and use ditch ul>li
+        - I'm not sure what are implication of that
+
+      1. Explore usage of display:contents to remove bounding box of ul
+    -->
+
     <div class="left">
       <!-- logo in form of text -->
+      <span>iVujanic Store.</span>
     </div>
+
     <div class="right">
-      <!-- links and avatar with name -->
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Works</a></li>
+      </ul>
+
+      <span>|</span>
+
+      <div class="personal">
+        Marko Vujanic
+        <img src="https://i.pravatar.cc/200?img=2" alt="profile avatar" />
+      </div>
+
     </div>
+
   </nav>
-  <h1>This is my title</h1>
-  <h2>This is my title</h2>
-  <h3>Harro this is </h3>
-<p>Hello There </p>
 </body>
 
 </html>
