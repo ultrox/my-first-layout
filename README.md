@@ -4,6 +4,8 @@ https://codepen.io/noconnection/pen/KKXjgWP
 
 
 ## Working on the layout
+This layout is done looking at [this design](https://ishadeed.com/assets/flexbox/home.png)
+
 Trying to improve my css skills by building (hopefully) many layouts. Details are not as important.
 
 I draw a lot of inspiration from greate Hayden Pickering (every layout), Andy Bell (cube) and books like Css in Depth as well Master CSS very impressed with [this article](https://tiffanybbrown.com/2022/01/how-does-flexbox-work/index.html)
