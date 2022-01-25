@@ -1,3 +1,8 @@
+### Precursor
+Before making this just few days before I had this simple layout done. 👇
+https://codepen.io/noconnection/pen/KKXjgWP
+
+
 ## Working on the layout
 Trying to improve my css skills by building (hopefully) many layouts. Details are not as important.
 
