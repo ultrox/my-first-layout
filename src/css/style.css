@@ -124,5 +124,16 @@ nav + div {
 }
 
 #dev-header {
-  display:none;
+  display: none;
+}
+
+.top-section__header {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-section__header .filter{
+  font-size: var(--font-size-xs)
 }
