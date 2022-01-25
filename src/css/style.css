@@ -124,7 +124,7 @@ nav + div {
 }
 
 #dev-header {
-  display: none;
+  display: initial;
 }
 
 .top-section__header {
@@ -134,6 +134,33 @@ nav + div {
   justify-content: space-between;
 }
 
-.top-section__header .filter{
-  font-size: var(--font-size-xs)
+.top-section__header .filter {
+  font-size: var(--font-size-xs);
+}
+
+.top-seller img {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.top-section__body {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.top-section__body .top-seller {
+  display: flex;
+  gap: 0.5em;
+}
+
+.top-seller__img {
+  flex-shrink: 0;
+}
+
+.top-section__body-text {
+  font-size: var(--font-size-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
