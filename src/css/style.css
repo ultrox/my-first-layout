@@ -84,6 +84,8 @@ nav + div {
 
 /* Sidebar */
 .with-sidebar {
+  resize: both;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   gap: var(--default-gap);
@@ -99,8 +101,18 @@ nav + div {
 }
 
 .sidebar-links {
+  --threshold: 60ch;
   font-size: var(--font-size-sm);
   color: var(--brand-white);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.sidebar-links li {
+  margin-left: calc(var(--tile-padding) * -1);
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+  white-space: nowrap;
 }
 
 .sidebar-links li a {
@@ -116,10 +128,6 @@ nav + div {
 .sidebar-links li a:hover {
   color: var(--brand-main-color);
   background-color: hsl(213deg 60% 97%);
-}
-
-.sidebar-links li {
-  margin-left: calc(var(--tile-padding) * -1);
 }
 
 #dev-header {
