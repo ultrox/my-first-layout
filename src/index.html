@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/dev.css">
 
   <link rel="stylesheet" href="./css/utils.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/0.5.12/MinFaker.js"></script>
+
+
 
 </head>
 
@@ -131,47 +134,69 @@
             </div>
           </header>
 
-          <!-- div.top-seller*2>img.top-seller__img[alt="word" src="https://picsum.photos/200?img=$"]+div>(span>lorem2)+span>lorem2 -->
+          <!-- div.top-seller*8>img.top-seller__img[width="40px" alt="word" src="https://i.pravatar.cc/200?img=$"]+div.top-section__body-text>(div.name>lorem2)+div.price>lorem2 -->
+
+
           <section class="top-section__body">
 
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=1" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Lorem, ipsum.</span><span>Lorem, ipsum.</span></div>
-            </div>
-            <div class="top-seller">
-              <img src="https://picsum.photos/200?img=2" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Quasi, vel?</span><span>Deserunt, perspiciatis.</span></div>
-            </div>
-            <div class="top-seller">
-              <img src="https://picsum.photos/200?img=3" alt="word" class="top-seller__img">
-
+              <img src="https://i.pravatar.cc/200?img=1" alt="word" class="top-seller__img" width="40px">
               <div class="top-section__body-text">
-                <span>Cupiditate, nesciunt.</span>
-                <span>Similique, libero!</span>
+                <div class="name">Lorem, ipsum.</div>
+                <div class="price">Lorem, ipsum.</div>
               </div>
-
             </div>
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=4" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Fuga, repudiandae?</span><span>Possimus, eaque.</span></div>
+              <img src="https://i.pravatar.cc/200?img=2" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Odit, iste!</div>
+                <div class="price">Blanditiis, obcaecati.</div>
+              </div>
             </div>
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=5" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Animi, cumque!</span><span>Eius, itaque.</span></div>
+              <img src="https://i.pravatar.cc/200?img=3" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Nihil, repellendus.</div>
+                <div class="price">Molestias, voluptate!</div>
+              </div>
             </div>
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=6" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Nulla, debitis!</span><span>Doloribus, temporibus.</span></div>
+              <img src="https://i.pravatar.cc/200?img=4" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Ipsam, mollitia.</div>
+                <div class="price">Doloribus, molestiae.</div>
+              </div>
             </div>
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=7" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Vero, est.</span><span>Cumque, cupiditate!</span></div>
+              <img src="https://i.pravatar.cc/200?img=5" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Obcaecati, quibusdam!</div>
+                <div class="price">Dicta, dolore.</div>
+              </div>
             </div>
             <div class="top-seller">
-              <img src="https://picsum.photos/200?img=8" alt="word" class="top-seller__img">
-              <div class="top-section__body-text"><span>Illo, dolore.</span><span>A, ducimus.</span></div>
+              <img src="https://i.pravatar.cc/200?img=6" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Neque, corrupti!</div>
+                <div class="price">Deserunt, id.</div>
+              </div>
+            </div>
+            <div class="top-seller">
+              <img src="https://i.pravatar.cc/200?img=7" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Error, et?</div>
+                <div class="price">Maiores, eaque?</div>
+              </div>
+            </div>
+            <div class="top-seller">
+              <img src="https://i.pravatar.cc/200?img=8" alt="word" class="top-seller__img" width="40px">
+              <div class="top-section__body-text">
+                <div class="name">Magni, reprehenderit.</div>
+                <div class="price">Omnis, aliquam!</div>
+              </div>
             </div>
           </section>
+
 
         </section>
 
@@ -189,6 +214,29 @@
 
     </div>
   </div>
+
+  <script>
+    function main() {
+      const $ = (sel) => Array.from(document.querySelectorAll(sel));
+
+      function randNum() {
+        return Math.floor(Math.random() * 1000);
+      }
+      $(".name").forEach((el) => {
+        el.innerHTML = `${Faker.Name.firstName()} ${Faker.Name.lastName()}`;
+      });
+
+      $(".price").forEach((el) => {
+        el.innerHTML = `${randNum()} Orders`;
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("done");
+      main();
+    });
+
+  </script>
 </body>
 
 </html>

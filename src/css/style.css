@@ -147,7 +147,8 @@ nav + div {
 
 .top-seller img {
   border-radius: 50%;
-  width: 4rem;
+  width: 60px;
+  height: 60px; /* why aspect get's messed up if there is no height?*/
 }
 
 .top-section__body {
