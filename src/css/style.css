@@ -167,7 +167,7 @@ nav + div {
 }
 
 .top-section__body-text {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   display: flex;
   flex-direction: column;
   justify-content: center;
