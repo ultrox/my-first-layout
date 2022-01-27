@@ -131,7 +131,7 @@ nav + div {
 }
 
 #dev-header {
-  display: initial;
+  display: none;
 }
 
 .top-section__header {
