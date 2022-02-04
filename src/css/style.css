@@ -183,24 +183,64 @@ header h4 {
   color: var(--brand-main-color);
 }
 
-.section-body {
+.top-section .section-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   gap: 1rem;
 }
 
-.section-body article {
+.top-section .section-body article {
   display: flex;
   gap: 1rem;
 }
 
-.article-image {
+.top-section .article-image {
   flex-shrink: 0;
 }
-.article-image img {
+
+.top-section .article-image img {
   width: 200px;
   aspect-ratio: 1.33;
   object-fit: cover;
   object-position: center center;
   border-radius: 10px;
+}
+
+.search {
+  --around-gap: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.search-button {
+  background-color: var(--brand-main-color);
+  color: var(--brand-white);
+  border-radius: 200px;
+  padding: var(--around-gap);
+  min-width: 15ch;
+  font-size: var(--font-size-sm);
+}
+
+.search-button:hover {
+  color: hsl(0 0% 90% / 1);
+}
+
+.search-input {
+  flex: auto;
+  padding-block: var(--around-gap);
+  padding-inline: 1rem;
+  font-size: var(--font-size-sm);
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  background-color: var(--brand-white);
+  color: #999;
+  min-width: 20ch;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--brand-main-color);
 }
