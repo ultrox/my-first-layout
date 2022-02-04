@@ -244,3 +244,24 @@ header h4 {
 .search-input:focus {
   outline: 2px solid var(--brand-main-color);
 }
+
+.last-section .section-body {
+  --break-when: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.last-section .section-body article {
+  flex: 1;
+  flex-basis: calc((var(--break-when) - 100%) * 9999);
+  text-align: center;
+}
+
+.last-section .section-body article img {
+  aspect-ratio: 1.33;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+  margin-inline: auto;
+}
