@@ -93,6 +93,7 @@ nav + div {
 
 .with-sidebar > :first-child {
   flex: 45ch;
+  align-self: flex-start;
 }
 
 .with-sidebar > :last-child {
@@ -131,7 +132,7 @@ nav + div {
 }
 
 #dev-header {
-  display: initial;
+  display: none;
   font-size: small;
 }
 
