@@ -167,8 +167,13 @@ nav + div {
 }
 
 .top-section__body-text {
-  font-size: var(--font-size-sm);
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 1.2;
+}
+
+.top-section__body-text  .price {
+  font-size: 0.8em;
 }
