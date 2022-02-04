@@ -131,7 +131,8 @@ nav + div {
 }
 
 #dev-header {
-  display: none;
+  display: initial;
+  font-size: small;
 }
 
 .top-section__header {
@@ -174,6 +175,32 @@ nav + div {
   line-height: 1.2;
 }
 
-.top-section__body-text  .price {
+.top-section__body-text .price {
   font-size: 0.8em;
+}
+
+header h4 {
+  color: var(--brand-main-color);
+}
+
+.section-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 1rem;
+}
+
+.section-body article {
+  display: flex;
+  gap: 1rem;
+}
+
+.article-image {
+  flex-shrink: 0;
+}
+.article-image img {
+  width: 200px;
+  aspect-ratio: 1.33;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
 }
