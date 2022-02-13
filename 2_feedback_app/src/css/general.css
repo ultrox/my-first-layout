@@ -1,7 +1,29 @@
 :root {
   --default-gap: 1rem;
+  --main-hue1: 280;
+  --main-hue2: 230;
+
+  --main-color: hsl(var(--main-hue2), 75%, 60%);
+
+  --main-color50: hsl(var(--main-hue2), 30%, 30%);
+  --main-color40: hsl(var(--main-hue2), 30%, 35%);
+  --main-color30: hsl(var(--main-hue2), 20%, 50%);
+  --main-color20: hsl(var(--main-hue2), 100%, 97%);
+  --main-color10: hsl(var(--main-hue2), 60%, 98%);
+
+  --sky-blue: hsl(205, 90%, 70%);
+  --red: hsl(0, 70%, 50%);
+  --red40: hsl(0, 70%, 70%);
+  --orange: hsl(15, 80%, 75%);
+
+  --white: hsl(0, 0%, 100%);
 }
 
 html {
   font-size: 100%;
 } /*16px*/
+
+body {
+  background-color: var(--main-color10);
+  font-family: Jost, system-ui, sans-serif;
+}
