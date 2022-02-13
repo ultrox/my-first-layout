@@ -1,0 +1,17 @@
+A) I'm missing a mental framework
+B) I didn't do enough of those
+
+Questions I always have:
+- Do I use rem's here or px on this specific element
+- Do I set a fixed height for this nav component and then micromanage it with media queries or let it be sized by content
+	- this depends on the context
+- How much defensive do I need to be
+
+
+## Understunding
+- Mental framework of em
+- Greate explanation pros and cons of using tag selector as the last selector
+- Build stuff twice
+(It's not how long it took you to create it the first time, to build it, but how long it took you to create it the second time)
+
+
