@@ -1,0 +1,7 @@
+:root {
+  --default-gap: 1rem;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/

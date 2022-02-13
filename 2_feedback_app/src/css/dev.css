@@ -1,0 +1,12 @@
+#dev-header {
+  background-color: #ccc;
+}
+
+#dev-header {
+  display: none;
+  font-size: small;
+}
+
+#dev-header .space {
+	margin-right: 2em;
+}

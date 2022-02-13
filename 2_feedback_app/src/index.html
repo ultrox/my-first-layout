@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout #2</title>
+  <link rel="stylesheet" href="./css/resets/josh-reset.css">
+  <link rel="stylesheet" href="./css/general.css">
+
+  <link rel="stylesheet" href="css/dev.css">
+
+  <link rel="stylesheet" href="./css/utils.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/0.5.12/MinFaker.js"></script>
+
+  <!-- https://css-tricks.com/emoji-as-a-favicon/ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+      <text y=%22.9em%22 font-size=%2290%22>
+				🔥
+      </text>
+    </svg>">
+
+  <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js"
+    id="ZwSg9rf6GA" async defer></script>
+</head>
+
+<body>
+
+  <header id="dev-header">
+    dev:
+    <a rel="noopener noreferrer" href="https://type-scale.com/" target="_blank">Scale |</a>
+    <a rel="noopener noreferrer" href="https://www.fluid-type-scale.com/" target="_blank">Fluid Scale |</a>
+    <a rel="noopener noreferrer" href="https://heroicons.com/" target="_blank">Icons |</a>
+    <a rel="noopener noreferrer" href="https://www.responsivebreakpoints.com/" target="_blank">Breakpoint |</a>
+    <a rel="noopener noreferrer" href="https://tinypng.com/" target="_blank">Tiny PNG</a> |
+    <a rel="noopener noreferrer" href="https://picsum.photos" target="_blank">Random Placeholder</a> |
+    <a rel="noopener noreferrer" href="https://logoipsum.com/" target="_blank">Logos Placeholder</a> |
+    <a class="space" rel="noopener noreferrer" href="https://pravatar.cc/" target="_blank">Face Avatars</a> |
+
+    <a rel="noopener noreferrer" href="https://www.science.co.il/language/Locale-codes.php" target="_blank">Locales</a>
+    |
+    <a rel="noopener noreferrer" href="https://unicode-table.com/en/html-entities/" target="_blank">HTML Entities</a>
+
+  </header>
+
+  <nav></nav>
+
+
+  <script>
+    function main() {
+      const $ = (sel) => Array.from(document.querySelectorAll(sel));
+
+      function randNum() {
+        return Math.floor(Math.random() * 1000);
+      }
+      $(".name").forEach((el) => {
+        el.innerHTML = `${Faker.Name.firstName()} ${Faker.Name.lastName()}`;
+      });
+
+      $(".price").forEach((el) => {
+        el.innerHTML = `${randNum()} Orders`;
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("done");
+      main();
+    });
+  </script>
+
+</body>
+
+</html>
