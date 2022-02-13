@@ -6,13 +6,14 @@
   - I always thinking about do I use utility or just mix display flex
     in block of elements, it feels like I'm mixing concern's
 */
-body {
-  background-color: var(--main-bg-color);
-}
 
 :root {
   /* --main-color:  */
   --brand-main-color: hsl(217, 90%, 72%);
+}
+
+body {
+  background-color: var(--main-bg-color);
 }
 
 nav {
@@ -129,11 +130,6 @@ nav + div {
 .sidebar-links li a:hover {
   color: var(--brand-main-color);
   background-color: hsl(213deg 60% 97%);
-}
-
-#dev-header {
-  display: none;
-  font-size: small;
 }
 
 .top-section__header {
