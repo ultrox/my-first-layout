@@ -1,27 +1,87 @@
 :root {
+  --measure: 70ch;
   --default-gap: 1rem;
-  --main-hue1: 280;
-  --main-hue2: 230;
+  --main-hue1: 280deg;
+  --main-hue2: 230deg;
 
-  --main-color: hsl(var(--main-hue2), 75%, 60%);
+  --accent1-hue: 280deg;
+  --accent1-sat: 80%;
+  --accent1-light: 50%;
+  --accent1: hsl(280, 80%, 50%);
+  --accent1-glare: hsl(280, 80%, 60%);
 
+  --accent2: hsl(0, 70%, 50%);
+  --accent2-glare: hsl(0, 70%, 70%);
+
+  --main-color: hsl(230, 75%, 60%);
   --main-color50: hsl(var(--main-hue2), 30%, 30%);
-  --main-color40: hsl(var(--main-hue2), 30%, 35%);
-  --main-color30: hsl(var(--main-hue2), 20%, 50%);
-  --main-color20: hsl(var(--main-hue2), 100%, 97%);
-  --main-color10: hsl(var(--main-hue2), 60%, 98%);
+  --main-color40: hsl(230, 30%, 35%);
+  --main-color30: hsl(230, 20%, 50%);
+  --main-color25: hsl(230, 50%, 90%);
+  --main-color20: hsl(230, 100%, 97%);
+  --main-color10: hsl(230, 60%, 98%);
 
   --sky-blue: hsl(205, 90%, 70%);
-  --red: hsl(0, 70%, 50%);
-  --red40: hsl(0, 70%, 70%);
   --orange: hsl(15, 80%, 75%);
-
   --white: hsl(0, 0%, 100%);
+}
+
+* {
+  max-inline-size: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
 }
 
 html {
   font-size: 100%;
 } /*16px*/
+
+h1,
+h3,
+h4 {
+  color: var(--main-color50);
+}
+
+p {
+  color: var(--main-color30);
+}
+
+input[type='text'],
+textarea {
+  background-color: var(--main-color10);
+  color: var(--main-color40);
+  border: 1px solid var(--main-color30);
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type='text']:active,
+input[type='text']:focus,
+textarea:focus {
+  color: var(--main-color40);
+  border: 1px solid var(--main-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem
+    hsla(var(--accent1-hue), var(--accent1-sat), var(--accent1-light), 25%);
+}
+
+.input-error {
+  border: 1px solid var(--accent2);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-color30);
+  opacity: 0.8; /* Firefox */
+}
 
 body {
   background-color: var(--main-color10);
