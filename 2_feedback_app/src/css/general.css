@@ -64,14 +64,17 @@ body {
 
 h1 {
   font-size: var(--font-size-600);
+  color: currentColor;
 }
 
 h2 {
   font-size: var(--font-size-400);
+  color: currentColor;
 }
 
 p {
   color: var(--main-color30);
+  color: currentColor;
 }
 
 input[type='text'],

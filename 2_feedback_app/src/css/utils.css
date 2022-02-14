@@ -15,7 +15,7 @@
   border-top: 1px solid #ccc
 }
 
-.reset-button {
+.ghost-button {
   border: none;
   background: none;
   padding: 0;
@@ -23,4 +23,5 @@
   color: inherit;
   cursor: pointer;
   appearance: none;
+  color: var(--white);
 }
