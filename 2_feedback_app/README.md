@@ -59,5 +59,10 @@ https://medium.com/coding-blocks/css-padding-a-magic-wand-2b8a66b84ebe
 
 
 
+### Questions
+- If I use title on a elements do I need aria-label, this is for links that
+	have not children as text, but icons?
+
+
 ### Live preview
 https://layout-no2.netlify.app/

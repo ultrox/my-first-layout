@@ -22,10 +22,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-aside {
+#open-sidebar {
   display: grid;
   height: calc(100% - var(--main-header-height));
   grid-template-columns: 1fr 2fr;
@@ -34,6 +33,10 @@ aside {
   z-index: 1;
   right: 0;
   left: 0;
+
+  will-change: transform;
+  transform: translateX(110vw);
+  transition: transform 0.5s ease-in-out;
 }
 
 aside nav.sidebar {
@@ -41,4 +44,8 @@ aside nav.sidebar {
   padding: 1rem;
 
   box-shadow: 5px 0 40px rgb(0 0 0 / 45%);
+}
+
+#open-sidebar:target {
+  transform: translateX(0);
 }
