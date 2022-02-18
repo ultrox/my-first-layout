@@ -1,5 +1,10 @@
+:root {
+  --main-header-height: 5rem;
+}
+
 .main-header {
-  padding: 1rem;
+  height: var(--main-header-height);
+  padding-inline: var(--default-gap);
   color: var(--white);
   background: radial-gradient(
     128.88% 128.88% at 103.9% -10.39%,
@@ -13,4 +18,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+aside {
+  display: grid;
+  height: calc(100% - var(--main-header-height));
+  grid-template-columns: 1fr 2fr;
+
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  left: 0;
+}
+
+aside nav.sidebar {
+  background-color: var(--main-color10);
+  padding: 1rem;
+
+  box-shadow: 5px 0 40px rgb(0 0 0 / 45%);
 }
