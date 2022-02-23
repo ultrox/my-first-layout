@@ -25,3 +25,24 @@
   appearance: none;
   color: var(--white);
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+.lock-scrollbar {
+  overflow-y: scroll !important;
+  position: fixed;
+
+	/* following might not be needed */
+  left: 0px; 
+  right: 0px;
+  bottom: 0px;
+}
