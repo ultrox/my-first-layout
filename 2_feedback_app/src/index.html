@@ -59,7 +59,7 @@
 
       <div class="site-info__right">
 
-        <a class="ghost-button hamburger" href="#open-sidebar" title="open sidebar" aria-label="open sidebar">
+        <a id="openButton" class="ghost-button hamburger" href="#open-sidebar" title="open sidebar" aria-label="open sidebar">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="16" height="3" fill="currentColor" />
             <rect x="2" y="8" width="16" height="3" fill="currentColor" />
@@ -134,7 +134,7 @@
 
     const sidebar = document.querySelector("#open-sidebar");
     const closeButton = document.querySelector("#sidebar__close");
-    const openButton = document.querySelector("#sidenav-button");
+    const openButton = document.querySelector("#openButton");
 
     sidebar.addEventListener("transitionend", ((tranEvent) => {
       if (tranEvent.propertyName !== 'width') return;
