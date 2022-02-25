@@ -58,7 +58,8 @@
       </div>
 
       <div class="site-info__right">
-        <a href="#open-sidebar" title="open sidebar" aria-label="open sidebar" class="ghost-button">
+
+        <a class="ghost-button hamburger" href="#open-sidebar" title="open sidebar" aria-label="open sidebar">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="16" height="3" fill="currentColor" />
             <rect x="2" y="8" width="16" height="3" fill="currentColor" />
@@ -84,15 +85,17 @@
   </header>
 
   <aside id="open-sidebar">
-    <button id="sidebar__close" class="ghost-button" title="Close Menu" aria-label="Close Menu"
-      onclick="history.go(-1)"></button>
-    <nav class="sidebar">
-      <ul style="list-style: none">
-        <li>Hi</li>
-        <li>hi</li>
-        <li>hi</li>
-      </ul>
-    </nav>
+    <div class="protect">
+      <button id="sidebar__close" class="ghost-button" title="Close Menu" aria-label="Close Menu"
+        onclick="history.go(-1)"></button>
+      <nav class="sidebar">
+        <ul style="list-style: none">
+          <li>Hi</li>
+          <li>hi</li>
+          <li>hi</li>
+        </ul>
+      </nav>
+    </div>
   </aside>
 
   <h2>Add tags for solutions</h2>
