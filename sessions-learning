@@ -29,4 +29,6 @@ I can and then override?
 Good examples are those titles that are the same size(but bold) as p text
 
 
-
+- If I use title on a elements do I need aria-label, this is for links that
+	have not children as text, but icons?
+- How can I hide that X button when target is open
