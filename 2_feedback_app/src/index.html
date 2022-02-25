@@ -58,7 +58,8 @@
       </div>
 
       <div class="site-info__right">
-        <a href="#open-sidebar" title="open sidebar" aria-label="open sidebar" class="ghost-button">
+
+        <a class="ghost-button hamburger" href="#open-sidebar" title="open sidebar" aria-label="open sidebar">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="16" height="3" fill="currentColor" />
             <rect x="2" y="8" width="16" height="3" fill="currentColor" />
@@ -83,16 +84,18 @@
     </div>
   </header>
 
-  <aside id="open-sidebar">
-    <button id="sidebar__close" class="ghost-button" title="Close Menu" aria-label="Close Menu"
-      onclick="history.go(-1)"></button>
-    <nav class="sidebar">
-      <ul style="list-style: none">
-        <li>Hi</li>
-        <li>hi</li>
-        <li>hi</li>
-      </ul>
-    </nav>
+  <aside tabindex='-1' id="open-sidebar">
+    <div class="antysquish">
+      <button id="sidebar__close" class="ghost-button" title="Close Menu" aria-label="Close Menu"
+        onclick="history.go(-1)"></button>
+      <nav class="sidebar">
+        <ul style="list-style: none">
+          <li>Hi</li>
+          <li>hi</li>
+          <li>hi</li>
+        </ul>
+      </nav>
+    </div>
   </aside>
 
   <h2>Add tags for solutions</h2>
@@ -118,6 +121,29 @@
       console.log("done");
       main();
     });
+  </script>
+  <script>
+
+    const sidenav = document.getElementById("open-sidebar");
+    console.log(sidenav);
+    sidenav.addEventListener('keyup', (event) => {
+      if (event.key === "Escape") {
+        history.go(-1);
+      }
+    })
+
+    const sidebar = document.querySelector("#open-sidebar");
+    const closeButton = document.querySelector("#sidebar__close");
+    const openButton = document.querySelector("#sidenav-button");
+
+    sidebar.addEventListener("transitionend", ((tranEvent) => {
+      if (tranEvent.propertyName !== 'width') return;
+
+      const isOpen = document.location.hash === '#open-sidebar';
+
+      isOpen ? sidebar.focus() : openButton.focus();
+
+    }));
   </script>
 
 </body>

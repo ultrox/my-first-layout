@@ -24,28 +24,39 @@
   align-items: center;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #open-sidebar {
-  display: grid;
+  --width: 250px;
   height: calc(100% - var(--main-header-height));
-  grid-template-columns: 1fr 2fr;
-
-  position: absolute;
-  z-index: 1;
+  position: fixed;
   right: 0;
-  left: 0;
+  width: 0;
 
-  will-change: transform;
-  transform: translateX(110vw);
-  transition: transform 0.5s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  background-color: var(--main-color10);
+  box-shadow: 8px 5px 40px 0px rgb(149 149 149 / 45%);
+}
+
+#open-sidebar:focus {
+  outline: none;
+}
+
+#open-sidebar .antysquish {
+  width: var(--width);
+}
+
+#open-sidebar:target {
+  width: var(--width);
+}
+
+#open-sidebar:target ~ .hamburger {
+  display: none;
 }
 
 aside nav.sidebar {
   background-color: var(--main-color10);
   padding: 1rem;
-
-  box-shadow: 5px 0 40px rgb(0 0 0 / 45%);
-}
-
-#open-sidebar:target {
-  transform: translateX(0);
 }
