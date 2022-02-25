@@ -60,3 +60,8 @@ aside nav.sidebar {
   background-color: var(--main-color10);
   padding: 1rem;
 }
+
+button#openButton:focus {
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
