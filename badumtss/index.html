@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Elm Ba Dum TSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+    
+    <script src="elm.js"></script>
+
+    <audio data-key="j" src="sounds/ba.wav"></audio>
+    <audio data-key="k" src="sounds/dum.wav"></audio>
+    <audio data-key="i" src="sounds/tss.wav"></audio>
+
+	<div class="keys">
+	    <div data-key="74" class="key">
+	      <kbd>J</kbd>
+	      <span class="sound">Ba</span>
+	    </div>
+	    <div data-key="75" class="key">
+	      <kbd>K</kbd>
+	      <span class="sound">dum</span>
+	    </div>
+	    <div data-key="73" class="key">
+	      <kbd>I</kbd>
+	      <span class="sound">Tss</span>
+	    </div>
+	  </div>
+    <script>
+
+      var app = Elm.Main.init({
+        node: document.getElementById("app")
+      });      
+
+	app.ports.playAudio.subscribe(str => {
+		var audio = document.querySelector(`audio[data-key="${str}"]`);
+		audio.pause();
+		audio.currentTime = 0;
+		audio.play();
+	})
+
+    </script>
+  </body>
+</html>
